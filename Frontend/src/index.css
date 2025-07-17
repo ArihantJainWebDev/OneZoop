@@ -14,3 +14,21 @@
 body, button, input, select, textarea {
   font-family: "poppins", sans-serif;
 }
+
+/* WebKit Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a188d4;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7a3ff2;
+}

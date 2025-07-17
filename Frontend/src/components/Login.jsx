@@ -31,9 +31,6 @@ const Login = () => {
           <button type="submit" className="btn btn-primary">Login</button>
           <div className="links">
             <p className="form-link">
-              Don't have an account? <a href="/register">Register here</a>
-            </p>
-            <p className="form-link">
               Forgot your password? <a href="/reset-password">Reset it</a>
             </p>
           </div>

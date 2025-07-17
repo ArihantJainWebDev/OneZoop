@@ -11,6 +11,6 @@
   font-family: "Winky Rough", sans-serif;
 }
 
-.body {
+body, button, input, select, textarea {
   font-family: "poppins", sans-serif;
 }

@@ -1,3 +1,30 @@
+:root {
+  --primary-gradient-start: #FFA07A;
+  --primary-gradient-end: #FF6347;
+  --text-color-light: #f0f0f0;
+  --text-color-dark: #333;
+  --input-background: #4a4a5e;
+  --border-color: #555;
+  --button-background-blue: #007bff;
+  --button-background-blue-hover: #0056b3;
+  --link-color: #79a7f3;
+}
+
+.dashboard-page {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: #3300666e; /* Slightly lighter purple for sidebar */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .dashboard-cards {
   display: flex;
   flex-wrap: wrap;
@@ -23,4 +50,428 @@
   padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.user-avatar {
+   
+    
+      width: 50px;
+      height: 50px;
+      background-image: url('files/adi.png');
+      border-radius: 100%;
+      background-size: cover; /* Scale image to cover the container */
+      background-position: center; /* Center the image */
+      border: 2px solid #333;
+      margin-right:15px;
+    
+/*     
+    width: 50px;
+    height: 50px;
+    background-color: #ff9900; /* Orange for avatar 
+    border-radius: 50%;
+    margin-right: 15px; */
+}
+
+.user-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.user-info p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin-bottom: 10px;
+}
+
+.nav-item a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item a:hover {
+    background-color: #ff9900; /* Orange on hover */
+}
+
+.nav-item.active a {
+    background-color: #ff9900; /* Orange for active item */
+}
+
+.nav-item .icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.return-home {
+    margin-top: auto; /* Pushes it to the bottom */
+}
+
+.return-home a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Main Content Styling */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.main-header p {
+    margin: 0;
+    color: #ccc;
+}
+
+.header-actions button {
+    background-color: #ff9900; /* Orange buttons */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.header-actions button:hover {
+    background-color: #e68a00; /* Darker orange on hover */
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #4d0080; /* Darker purple for cards */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.card .view-all {
+    float: right;
+    color: #ff9900;
+    text-decoration: none;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+/* Profile Completion Card */
+.profile-completion .completion-progress {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.progress-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ff9900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.completion-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.completion-items li {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+/* Application Statistics Card */
+.application-statistics .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    text-align: center;
+}
+
+.stats-grid .stat-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ff9900;
+    display: block;
+}
+
+.stats-grid p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+/* Recent Applications & Saved Opportunities List Styling */
+.app-list, .opportunity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.app-list li, .opportunity-list li {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.app-list li:last-child, .opportunity-list li:last-child {
+    border-bottom: none;
+}
+
+.company-initial {
+    width: 40px;
+    height: 40px;
+    background-color: #ff9900;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-right: 15px;
+    font-size: 1.1em;
+}
+
+.app-details, .opportunity-details {
+    flex-grow: 1;
+}
+
+.app-details p, .opportunity-details p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.app-details span, .opportunity-details span {
+    font-size: 0.85em;
+    color: #ccc;
+}
+
+.app-status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.app-status.in-review {
+    background-color: #ffcc00; /* Yellowish */
+    color: #333;
+}
+
+.app-status.interview-scheduled {
+    background-color: #9933ff; /* Purple */
+    color: #fff;
+}
+
+.app-status.applied {
+    background-color: #33cc33; /* Green */
+    color: #fff;
+}
+
+.app-status.rejected {
+    background-color: #ff3333; /* Red */
+    color: #fff;
+}
+
+.btn-quick-apply {
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-quick-apply:hover {
+    background-color: #e68a00;
+}
+/* Add to your style.css */
+
+.resume-builder-section {
+    text-align: center; /* Center the content within this section */
+    padding: 50px 20px; /* Add some vertical padding */
+}
+
+.resume-builder-content {
+    background-color: #4d0080; /* Same dark purple as other cards */
+    padding: 40px;
+    border-radius: 10px;
+    display: inline-block; /* Allows content to shrink to fit and be centered by text-align */
+    max-width: 600px; /* Limit width for better readability */
+    width: 100%; /* Ensure it takes full width up to max-width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.resume-builder-content .resume-icon {
+    border-radius: 100px;
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 20px;
+    /* If you have a specific icon image, ensure its path is correct */
+}
+
+.resume-builder-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.resume-builder-content p {
+    font-size: 1.1em;
+    color: #ccc;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    max-width: 400px; /* Constrain text width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-start-building {
+    background-color: #ff9900; /* Orange button */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-start-building:hover {
+    background-color: #e68a00; /* Darker orange on hover */
+}
+/* Add to your style.css */
+
+.account-settings-section h2 {
+    margin-bottom: 20px;
+}
+
+.settings-card {
+    background-color: #4d0080; /* Same dark purple as other cards */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.settings-card h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.4em;
+    color: #fff;
+}
+
+.form-group {
+    display: inline-block; /* For side-by-side inputs */
+    width: calc(50% - 10px); /* Roughly half width minus gap */
+    margin-bottom: 20px;
+    vertical-align: top; /* Align to top for elements on the same row */
+}
+
+.form-group:nth-child(odd) {
+    margin-right: 20px; /* Space between first name and last name */
+}
+
+.form-group.full-width {
+    width: 100%;
+    display: block; /* Ensures full width takes its own line */
+    margin-right: 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+    color: #ccc;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #663399; /* Slightly lighter border */
+    border-radius: 5px;
+    background-color: #330066; /* Darker background for inputs */
+    color: #fff;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus {
+    outline: none;
+    border-color: #ff9900; /* Orange border on focus */
+}
+
+.btn-save-changes {
+    background-color: #ff9900; /* Orange button */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 15px; /* Space above the button */
+    transition: background-color 0.3s ease;
+}
+
+.btn-save-changes:hover {
+    background-color: #e68a00; /* Darker orange on hover */
 }

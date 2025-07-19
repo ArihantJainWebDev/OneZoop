@@ -1,92 +1,87 @@
 import React from 'react'
 import "../styles/dashboard.css"
-import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
-import { FaBars, FaTimes, FaUser, FaCog, FaBookmark, FaBriefcase } from 'react-icons/fa';
-import Profile from '../components/Profile';
-import SavedJobs from '../components/SavedJobs';
-import Settings from '../components/Settings';
-import AppliedJobs from '../components/AppliedJobs';
+import Overview from '../components/Overview';
+import AppliedJobs from '../components/AppliedJobs'
+import SavedJobs from '../components/SavedJobs'
+import Profile from '../components/Profile'
+import Settings from '../components/Settings'
 
 const Dashboard = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
+  const [selectedComponent, setSelectedComponent] = React.useState('overview');
+
+  const renderComponent = () => {
+    switch (selectedComponent) {
+      case 'overview':
+        return <Overview />;
+      case 'applications':
+        return <AppliedJobs />;
+      case 'saved':
+        return <SavedJobs />;
+      case 'profile':
+        return <Profile />;
+      case 'settings':
+        return <Settings />;
+      default:
+        return <Overview />;
+    }
   };
 
   return (
     <div className="dashboard-page">
-      <div className={`dash-sidebar ${isSidebarOpen ? 'open' : 'closed'}`}>
-        <button className="toggle-btn" onClick={toggleSidebar}>
-          {isSidebarOpen ? <FaTimes /> : <FaBars />}
-        </button>
-        <nav className="sidebar-nav">
-          <NavLink to="/profile" className="nav-link">
-            <FaUser /> {isSidebarOpen && <span>Profile</span>}
-          </NavLink>
-          <NavLink to="/settings" className="nav-link">
-            <FaCog /> {isSidebarOpen && <span>Settings</span>}
-          </NavLink>
-          <NavLink to="/saved-jobs" className="nav-link">
-            <FaBookmark /> {isSidebarOpen && <span>Saved Jobs</span>}
-          </NavLink>
-          <NavLink to="/applied-jobs" className="nav-link">
-            <FaBriefcase /> {isSidebarOpen && <span>Applied Jobs</span>}
-          </NavLink>
-        </nav>
-      </div>
-      <div className="dashboard-body">
-        <div className="topbar">
-          <h1>Dashboard</h1>
+      <aside className="sidebar">
+        <div className="user-profile">
+          <div className="user-avatar">
+            <img src="../assets/avatar2.jpg" alt="" />
+          </div>
+          <div className="user-info">
+            <h3>Aditya Rajpoot</h3>
+            <p>Software Developer</p>
+          </div>
         </div>
-        <main className="main-content">
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <div className="dashboard-cards">
-                  <div className="card profile-card">
-                    <h2>Profile Overview</h2>
-                    <p>Welcome back, User!</p>
-                    <p>Status: <span style={{ color: "green" }}>Active</span></p>
-                    <button>View Profile</button>
-                  </div>
-                  <div className="card analytics-card">
-                    <h2>Applied Jobs Analytics</h2>
-                    <p>Total Applied: <b>12</b></p>
-                    <p>Interviews: <b>3</b></p>
-                    <p>Offers: <b>1</b></p>
-                    <button>View Details</button>
-                  </div>
-                  <div className="card recent-jobs-card">
-                    <h2>Recent Jobs</h2>
-                    <ul>
-                      <li>
-                        <b>Frontend Developer</b> at ABC Corp<br />
-                        <span>Applied: 2 days ago</span>
-                      </li>
-                      <li>
-                        <b>Backend Engineer</b> at XYZ Ltd<br />
-                        <span>Applied: 5 days ago</span>
-                      </li>
-                    </ul>
-                    <button>See All Jobs</button>
-                  </div>
-                  <div className="card saved-jobs-card">
-                    <h2>Saved Jobs</h2>
-                    <p>You have <b>5</b> jobs saved for later.</p>
-                    <button>View Saved Jobs</button>
-                  </div>
-                </div>
-              }
-            />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route path="/saved-jobs" element={<SavedJobs />} />
-            <Route path="/applied-jobs" element={<AppliedJobs />} />
-          </Routes>
-        </main>
+        <nav className="navigation">
+          <ul>
+            <li className={`nav-item ${selectedComponent === 'overview' ? 'active' : ''}`}>
+              <a onClick={() => setSelectedComponent('overview')}>
+                <span className="icon">🏠</span> Overview
+              </a>
+            </li>
+            <li className={`nav-item ${selectedComponent === 'applications' ? 'active' : ''}`}>
+              <a onClick={() => setSelectedComponent('applications')}>
+                <span className="icon">📋</span> Applications
+              </a>
+            </li>
+            <li className={`nav-item ${selectedComponent === 'saved' ? 'active' : ''}`}>
+              <a onClick={() => setSelectedComponent('saved')}>
+                <span className="icon">🔖</span> Saved Opportunities
+              </a>
+            </li>
+            <li className={`nav-item ${selectedComponent === 'profile' ? 'active' : ''}`}>
+              <a onClick={() => setSelectedComponent('profile')}>
+                <span className="icon">📄</span> Profile
+              </a>
+            </li>
+            <li className={`nav-item ${selectedComponent === 'settings' ? 'active' : ''}`}>
+              <a onClick={() => setSelectedComponent('settings')}>
+                <span className="icon">⚙️</span> Account Settings
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div className="return-home">
+          <a href="home.html">← Return to Home</a>
+        </div>
+      </aside>
+      <div className="dash-main-content">
+        <header className="main-header">
+          <h1>Welcome back, Alex!</h1>
+          <p>Here's what's happening with your career journey</p>
+          <div className="header-actions">
+            <button className="btn-edit-profile">✏️ Edit Profile</button>
+            <button className="btn-search-jobs">🔍 Search Jobs</button>
+          </div>
+        </header>
+        {renderComponent()}
       </div>
     </div>
   );

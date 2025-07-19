@@ -5,8 +5,10 @@ import AppliedJobs from '../components/AppliedJobs'
 import SavedJobs from '../components/SavedJobs'
 import Profile from '../components/Profile'
 import Settings from '../components/Settings'
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
+  const navigate = useNavigate();
 
   const [selectedComponent, setSelectedComponent] = React.useState('overview');
 
@@ -32,7 +34,7 @@ const Dashboard = () => {
       <aside className="sidebar">
         <div className="user-profile">
           <div className="user-avatar">
-            <img src="../assets/avatar2.jpg" alt="" />
+            <img src="./src/assets/avatar2.jpg" alt="" />
           </div>
           <div className="user-info">
             <h3>Aditya Rajpoot</h3>
@@ -69,16 +71,15 @@ const Dashboard = () => {
           </ul>
         </nav>
         <div className="return-home">
-          <a href="home.html">← Return to Home</a>
+          <a onClick={() => navigate('/home')}>← Return to Home</a>
         </div>
       </aside>
       <div className="dash-main-content">
         <header className="main-header">
           <h1>Welcome back, Alex!</h1>
-          <p>Here's what's happening with your career journey</p>
           <div className="header-actions">
             <button className="btn-edit-profile">✏️ Edit Profile</button>
-            <button className="btn-search-jobs">🔍 Search Jobs</button>
+            <button className="btn-search-jobs">🔍 Search Opportunities</button>
           </div>
         </header>
         {renderComponent()}

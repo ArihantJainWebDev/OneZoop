@@ -1,0 +1,117 @@
+.settings-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 40px;
+  background-color: var(--card-background);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  color: var(--text-color-light);
+  font-family: 'Poppins', sans-serif;
+}
+
+.settings-page h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.settings-section {
+  margin-bottom: 40px;
+}
+
+.settings-section h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 25px;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 8px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  color: var(--accent-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--accent-color);
+  border-radius: 12px;
+  background-color: var(--input-background);
+  color: var(--text-color-light);
+  font-size: 1.1em;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+  outline: none;
+  border-color: var(--accent-color-hover);
+  box-shadow: 0 0 8px var(--accent-color-hover);
+}
+
+.checkbox-group,
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.checkbox-group input[type="checkbox"],
+.radio-group input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.checkbox-group label,
+.radio-group label {
+  font-size: 1em;
+  color: var(--text-color-light);
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio-group > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-save-changes {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-top: 25px;
+  box-shadow: 0 8px 20px rgba(91, 75, 255, 0.7);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-save-changes:hover {
+  background-color: var(--accent-color-hover);
+  box-shadow: 0 10px 25px rgba(74, 59, 224, 0.9);
+  transform: translateY(-4px);
+}

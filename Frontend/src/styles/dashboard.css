@@ -25,7 +25,7 @@
 }
 
 .sidebar {
-    width: 400px;
+    width: 300px;
     background-color: rgba(48, 43, 99, 0.8);
     padding: 15px 20px;
     display: flex;
@@ -184,7 +184,7 @@
 
 .card {
     background-color: var(--card-background);
-    padding: 30px;
+    padding: 20px 30px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     color: var(--text-color-light);
@@ -197,9 +197,7 @@
 }
 
 .card h2 {
-    margin-top: 0;
     font-size: 1.8em;
-    margin-bottom: 25px;
     font-weight: 700;
 }
 
@@ -352,14 +350,14 @@
 .btn-trash-icon {
   background: transparent;
   border: none;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   cursor: pointer;
   color: #ff4c4c;
   transition: color 0.3s ease;
 }
 
 .btn-trash-icon:hover {
-  color: #ff1a1a;
+color: #ff1a1a;
 }
 
 /* Overview component specific styles */
@@ -370,6 +368,13 @@
   flex-wrap: wrap;
 }
 
+.completion-progress {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
 .profile-completion .progress-circle {
   width: 90px;
   height: 90px;
@@ -378,7 +383,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.8em;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #fff;
   box-shadow: 0 6px 15px rgba(91, 75, 255, 0.6);
@@ -390,7 +395,7 @@
   padding: 0;
   margin: 0;
   color: var(--text-color-muted);
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .profile-completion .completion-items li {
@@ -417,4 +422,11 @@
   margin: 0;
   font-size: 1em;
   color: var(--text-color-muted);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }

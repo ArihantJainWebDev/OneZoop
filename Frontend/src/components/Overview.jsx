@@ -6,7 +6,9 @@ const Overview = () => {
         <div>
             <section className="dashboard-grid">
                 <div className="card profile-completion">
-                    <h2>Profile Completion</h2>
+                    <div className="card-header">
+                        <h2>Profile Completion</h2>
+                    </div>
                     <div className="completion-progress">
                         <div className="progress-circle">75%</div>
                         <ul className="completion-items">
@@ -19,7 +21,9 @@ const Overview = () => {
                 </div>
 
                 <div className="card application-statistics">
-                    <h2>Application Statistics</h2>
+                    <div className="card-header">
+                        <h2>Application Statistics</h2>
+                    </div>
                     <div className="stats-grid">
                         <div>
                             <span className="stat-number">24</span>
@@ -41,8 +45,10 @@ const Overview = () => {
                 </div>
 
                 <div className="card recent-applications">
-                    <h2>Recent Applications</h2>
-                    <span className="view-all">View All</span>
+                    <div className="card-header">
+                        <h2>Recent Applications</h2>
+                        <span className="view-all">View All</span>
+                    </div>
                     <ul className="app-list">
                         <li>
                             <span className="company-initial">G</span>
@@ -72,8 +78,10 @@ const Overview = () => {
                 </div>
 
                 <div className="card saved-opportunities">
-                    <h2>Saved Opportunities</h2>
-                    <span className="view-all">View All</span>
+                    <div className="card-header">
+                        <h2>Saved Opportunities</h2>
+                        <span className="view-all">View All</span>
+                    </div>
                     <ul className="opportunity-list">
                         <li>
                             <span className="company-initial">A</span>

@@ -1,0 +1,146 @@
+.profile-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  background-color: var(--card-background);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  color: var(--text-color-light);
+  font-family: 'Poppins', sans-serif;
+}
+
+.profile-page h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.profile-section {
+  margin-bottom: 40px;
+}
+
+.profile-section h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 25px;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 8px;
+}
+
+.info-group {
+  margin-bottom: 15px;
+}
+
+.info-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-bottom: 6px;
+  color: var(--accent-color);
+}
+
+.info-group p {
+  font-size: 1.1em;
+  color: var(--text-color-light);
+  margin: 0;
+}
+
+.education-item {
+  margin-bottom: 20px;
+}
+
+.education-item h3 {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.education-item p {
+  margin: 2px 0;
+  color: var(--text-color-muted);
+  font-size: 1em;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-item {
+  background-color: var(--accent-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1em;
+  color: #fff;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  cursor: default;
+}
+
+.skill-item:hover {
+  background-color: var(--accent-color-hover);
+}
+
+.resume-upload input[type="file"] {
+  margin-top: 10px;
+  color: var(--text-color-light);
+}
+
+.resume-upload .note {
+  font-size: 0.9em;
+  color: var(--text-color-muted);
+  margin-top: 6px;
+}
+
+.project-item {
+  margin-bottom: 25px;
+}
+
+.project-item h3 {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.project-item p {
+  font-size: 1em;
+  color: var(--text-color-light);
+  margin-bottom: 6px;
+}
+
+.project-link {
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: var(--accent-color-hover);
+  text-decoration: underline;
+}
+
+.links-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+
+.links-list li a {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.links-list li a:hover {
+  color: var(--accent-color-hover);
+  text-decoration: underline;
+}
